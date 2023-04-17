@@ -1,0 +1,25 @@
+<div class="list-page">
+    <div class="options flex flex-end">
+        <div (click)="http.navigateTo('add-details')" class="option cursor-pointer">Add organization</div>
+        <div (click)="logoutUser()" class="uppercase option cursor-pointer">Logout</div>
+    </div>
+    <div class="data-table">
+        <div class="flex gray">
+            <div class="table header-table">Organisation Name</div>
+            <div class="table header-table">Short Name</div>
+            <div class="table header-table">URL</div>
+            <div class="table header-table">Logo</div>
+        </div>
+        <div *ngFor="let data of orgData; let odd = odd">
+            <div *ngIf="data.organizationName || data.organizationShortName || data.organizationURL || data.organizationLOGO"
+            [ngClass]="{'light-gray' : odd}"
+            class="flex">
+                <div class="table">{{data.organizationName}}</div>
+                <div class="table">{{data.organizationShortName}}</div>
+                <div class="table">{{data.organizationURL}}</div>
+                <div class="table">{{data.organizationLOGO}}</div>
+            </div>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,86 @@
+<div [formGroup]="organizationForm" class="detail-page">
+    <div>
+      <div class="flex user-data">
+        <div class="flex-end mr-10 flex w-100">Organization Name</div>
+        <div class="w-50">
+          <input id="organizationName" type="text" formControlName="organizationName">
+          <div class="mh-20">
+                <small class="text-danger"
+                  *ngIf="organizationForm.get('organizationName')?.hasError('maxLength')">
+                  Length can not be greater than 100 character.
+                </small>
+                <small class="text-danger"
+                  *ngIf="organizationForm.get('organizationName')?.hasError('required') && organizationForm.get('organizationName')?.touched">
+                  This field is required.
+                </small>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex user-data">
+        <div class="flex-end mr-10 flex w-100">Organization Short Name</div>
+        <div class="w-50">
+          <input id="organizationShortName" type="text" formControlName="organizationShortName">
+          <div class="mh-20">
+                <small class="text-danger"
+                  *ngIf="organizationForm.get('organizationShortName')?.hasError('maxLength')">
+                  Length can not be greater than 50 character.
+                </small>
+                <small class="text-danger"
+                  *ngIf="organizationForm.get('organizationShortName')?.hasError('required') && 
+                  organizationForm.get('organizationShortName')?.touched">
+                  This field is required.
+                </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex user-data">
+        <div class="flex-end mr-10 flex w-100">Organization URL</div>
+        <div class="w-50">
+          <input id="organizationURL" type="text" formControlName="organizationURL">
+          <div class="mh-20">
+                <small class="text-danger"
+                  *ngIf="organizationForm.get('organizationURL')?.invalid">
+                  Please enter valid URL.
+                </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex user-data">
+        <div class="flex-end mr-10 flex w-100">Logo</div>
+        <div class="w-50">
+          <input id="organizationLOGO" type="text" formControlName="organizationLOGO">
+          <div class="mh-20">
+                <small class="text-danger"
+                  *ngIf="organizationForm.get('organizationLOGO')?.hasError('maxLength') && 
+                  !organizationForm.get('organizationLOGO')?.hasError('required')">
+                  Length can not be greater than 200 character.
+                </small>
+                <small class="text-danger"
+                  *ngIf="organizationForm.get('organizationLOGO')?.hasError('required') && 
+                  organizationForm.get('organizationLOGO')?.touched">
+                  This field is required.
+                </small>
+                <small class="text-danger"
+                  *ngIf="organizationForm.get('organizationLOGO')?.invalid &&
+                   organizationForm.get('organizationLOGO')?.touched && 
+                   !organizationForm.get('organizationLOGO')?.hasError('required')">
+                  Please enter only string value.
+                </small>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="flex flex-end w-50">
+        <div class="submit-btn cursor-pointer gray" 
+        (click)="addOrganizationData()"><span >Save</span></div>
+        <div class="submit-btn cursor-pointer light-gray" 
+        (click)="clearOrganizationData()"><span>Cancel</span></div>
+    </div>
+
+</div>

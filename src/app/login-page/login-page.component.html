@@ -1,0 +1,61 @@
+<div  [formGroup]="loginForm" class="login-page">
+    <h1>Login page</h1>
+    <div class="w-50">
+      <div class="flex user-data">
+        <div class="flex-end mr-10 flex w-100">Email</div>
+        <div class="w-50">
+          <input id="userEmail" type="text" formControlName="userEmail">
+          <div class="mh-20">
+            <ng-container *ngIf="loginForm.get('userEmail')?.invalid && loginForm.get('userEmail')?.errors && 
+            (loginForm.get('userEmail')?.dirty || loginForm.get('userEmail')?.touched)">
+            <small class="text-danger"
+                  *ngIf="loginForm.get('userEmail')?.hasError('required')">
+                  This field is required.
+              </small>
+              <small class="text-danger"
+                  *ngIf="loginForm.get('userEmail')?.invalid && !loginForm.get('userEmail')?.hasError('required')">
+                  Please enter valid email id.
+              </small>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex user-data">
+        <div class="flex-end mr-10 flex w-100">Password</div>
+        <div class="w-50">
+          <input id="password" type="password" formControlName="password">
+          <div class="mh-20">
+            <ng-container *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.errors && 
+            (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+            <small class="text-danger"
+                  *ngIf="loginForm.get('password')?.hasError('required')">
+                  This field is required.
+              </small>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex user-data">
+        <div class="flex-end mr-10 flex w-100">Organization URL</div>
+        <div class="w-50">
+          <input id="organizationUrl" type="text" formControlName="organizationUrl">
+          <div class="mh-20">
+            <ng-container *ngIf="loginForm.get('organizationUrl')?.invalid && loginForm.get('organizationUrl')?.errors && 
+            (loginForm.get('organizationUrl')?.dirty || loginForm.get('organizationUrl')?.touched)">
+            <small class="text-danger"
+                  *ngIf="loginForm.get('organizationUrl')?.hasError('required')">
+                  This field is required.
+              </small>
+            </ng-container>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-end w-50">
+      <div class="submit-btn cursor-pointer" (click)="submitForm()"><span >Login</span></div>
+    </div>
+</div>

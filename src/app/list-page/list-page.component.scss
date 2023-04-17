@@ -1,0 +1,33 @@
+.list-page {
+    width: calc(100vw - 50px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .options {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px 0 20px;
+        .option{
+            background-color: rgb(24, 187, 238);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-left: 20px;
+        }
+    }
+    .header-table{
+        border-bottom: 0 !important;
+        border-top: 2px solid !important;
+        border-color: black !important;
+        color: white;
+    }
+    .table {
+        width: 25%;
+        border: 1px solid;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 10px;
+    }
+}

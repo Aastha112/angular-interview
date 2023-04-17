@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+.flex {
+    display: flex;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.space-btn {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mh-20{
+    min-height: 20px;
+}
+.text-danger {
+    color: red;
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.8;
+}
+.gray {
+    background-color: gray;
+}
+.light-gray {
+    background-color: lightgray;
+}
+.w-50{
+    width: 50%;
+}
+.w-100{
+    width: 100%;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
