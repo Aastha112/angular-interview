@@ -1,10 +1,14 @@
-# Demo
+# Organization-form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+-> This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+-> Organization-form application contains three main-components and each component has made use of    angular concepts like reactive-forms, routing built-in directives, HTTP interceptor, services, etc.
+-> This application gives a basic idea about storing and rendering data using APIs.
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+In order to host this project, run `npm run host` command.
 
 ## Code scaffolding
 
