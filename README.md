@@ -1,9 +1,10 @@
 # Organization-form
 
 -> This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
--> Organization-form application contains three main-components and each component has made use of    angular concepts like reactive-forms, routing built-in directives, HTTP interceptor, services, etc.
--> This application gives a basic idea about storing and rendering data using APIs.
 
+-> Organization-form application contains three main-components and each component has made use of    angular concepts like reactive-forms, routing built-in directives, HTTP interceptor, services, etc.
+
+-> This application gives a basic idea about storing and rendering data using APIs.
 
 ## Development server
 
